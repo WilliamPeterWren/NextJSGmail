@@ -1,0 +1,64 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #434b54;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ffffff;
+    --foreground: #3c3c3c;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  margin: auto;
+  padding: auto;
+  width: 1900px;
+  max-height: 900px;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+
+.mail-section-container:hover {
+  scrollbar-width: thin;
+}
+
+.mail-section-container:hover::-webkit-scrollbar {
+  display: block;
+}
+
+.mail-section-container::-webkit-scrollbar {
+  display: none;
+}
+
+.content:hover {
+  scrollbar-width: thin;
+}
+
+.content:hover::-webkit-scrollbar {
+  display: block;
+}
+
+.content::-webkit-scrollbar {
+  display: none;
+}
+
+a{
+  color: rgb(45, 45, 195)
+}
+
+a:hover{
+  color: rgb(217, 11, 42)
+}

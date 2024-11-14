@@ -1,0 +1,7 @@
+threadId: Sender different from Reciever
+Sender.messageId == Reciever.inReplyTo
+Reciever.references = Sender.inReplyTo + Sender.messageId
+
+ngrok = https://7a16-115-79-214-101.ngrok-free.app
+
+gcloud projects add-iam-policy-binding gmail-downloader-435403 --member="serviceAccount:gmail-api-push@system.gserviceaccount.com" --role="roles/pubsub.publisher"

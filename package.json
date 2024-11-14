@@ -1,0 +1,71 @@
+{
+  "name": "Gmail-NextJS-Electron",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Gmail William PT App",
+  "main": "electron/electron.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && next export",
+    "export": "next export",
+    "start": "next start",
+    "lint": "next lint",
+    "electron": "cross-env ELECTRON_START_URL=http://localhost:3000 electron electron/electron.js",
+    "start:all": "concurrently \"npm run dev\" \"npm run electron\"",
+    "dist": "electron-builder"
+  },
+  "build": {
+    "appId": "com.example.GmailByWilliam",
+    "productName": "William Gmail",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "build/**/*",
+      "node_modules/**/*",
+      "package.json",
+      "electron/**/*"
+    ],
+    "win": {
+      "target": "nsis"
+    },
+    "mac": {
+      "target": "dmg"
+    }
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.3.0",
+    "axios": "^1.7.7",
+    "dompurify": "^3.1.7",
+    "Gmail-NextJS-Electron": "file:",
+    "googleapis": "^144.0.0",
+    "moment": "^2.30.1",
+    "moment-timezone": "^0.5.46",
+    "my-electron-app": "file:",
+    "next": "15.0.0",
+    "next-auth": "^4.24.8",
+    "react": "19.0.0-rc-65a56d0e-20241020",
+    "react-dom": "19.0.0-rc-65a56d0e-20241020",
+    "react-redux": "^9.1.2",
+    "socket.io": "^4.8.1",
+    "socket.io-client": "^4.8.1",
+    "sweetalert2": "^11.14.4",
+    "tailwind-scrollbar-hide": "^1.1.7"
+  },
+  "author": "William <williampt2404@gmail.com>",
+  "devDependencies": {
+    "@types/next-auth": "^3.15.0",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "concurrently": "^9.0.1",
+    "cross-env": "^7.0.3",
+    "electron": "^25.1.8",
+    "electron-builder": "^25.1.8",
+    "eslint": "^8",
+    "eslint-config-next": "15.0.0",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}

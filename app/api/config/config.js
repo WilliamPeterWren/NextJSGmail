@@ -1,0 +1,1 @@
+export const LoginURL = "http://localhost:3000/api/auth/signin?callbackUrl=http%3A%2F%2Flocalhost%3A3000%2F"
